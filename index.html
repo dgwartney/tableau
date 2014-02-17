@@ -39,10 +39,19 @@
         </div>
 
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to Baseball Statistics and Tableau.</h3>
+        <a name="welcome-to-baseball-satistics-and-tableau" class="anchor" href="#welcome-to-baseball-statistics-and-tableau"><span class="octicon octicon-link"></span></a>Welcome to Baseball Statistics and Tableau.
+        </h3>
 
 <p>This page showcases calculation and visualization within <a href="http://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="http://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>. Tableau provides a public site that allows sharing of visualizations created using <a href=http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed your visualizations within your own pages which has been done here.
 </p>
+        <h3>
+        <a name="preparing-the-data" class="anchor" href="#preparing-the-data"><span class="octicon octicon-link"></span></a>Preparing the Data</h3>
+        <p>Baseball statistic data mentioned above comes in three different formats: Access Database, SQL DDL and DML, and files in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.
+I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or Kettle</a> to clean and normalize the data. The normalized data then would be loaded into a relation cube using a star schema.
+Using CSV files as the source of data was a chance to show examples of how Tableau can be used to prepare data directly.
+For these examples only three files of the complete set of data was used.
+A data source was defined in Tableau that joined the following files:<code>batting.csv</code>,<code>master.csv</code>, and<code>teams.csv</code>. Included in the baseball data distribution is a text file describing the contents of each of the files and fields within them.
+        </p>
 
 <!--
 <p> using automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
@@ -54,10 +63,24 @@ $ git checkout gh-pages
 <p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
 -->
 
-
+http://community.pentaho.com/projects/data-integration/
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
+<a name="player-batting-comparison" class="anchor" href="#player-batting-comparison"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
+
+<p>
+<a href="http://www.homerunweb.com/onbase.html">On Base Percentage<a>
+<a href="http://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>
+Details and the significance of slugging percentage can be found on <a href="http://en.wikipedia.org/wiki/Slugging_percentage">Wikipedia</a>
+</p>
+
+<h4>Instructions on using player batting comparison</h4>
+<ol>
+<li>First use the season and team drop down menus narrow the players of interest</li>
+<li>Second use the players drop down menu to select the player(s) for which you want to view their batting average, OBP(On Base Percentage), and SLG(Slugging Percentage) over time.</li>
+<ol>
+
+
 
 <script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 895px;'><noscript><a href='#'><img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='895' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='Baseball_8&#47;PlayerBattingComparison' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a></div></div>
 
