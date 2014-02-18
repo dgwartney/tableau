@@ -48,7 +48,7 @@ Tableau provides a public site that allows sharing of visualizations created usi
         <h3>
         <a name="preparing-the-data" class="anchor" href="#preparing-the-data"><span class="octicon octicon-link"></span></a>Preparing the Data</h3>
         <p>Baseball statistic data mentioned above comes in three different formats: Access Database, SQL DDL and DML, and files in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.
-I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> or <a href="http://www.postgresql.org">PostgreSQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or by its open source name Kettle</a> to clean and normalize the data and then the normalized data would be loaded into a relation cube consisting ofa star schema with appropriate dimensions and measures.
+I chose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> or <a href="http://www.postgresql.org">PostgreSQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or by its open source name Kettle</a> to clean and normalize the data and then the normalized data would be loaded into a relation cube consisting ofa star schema with appropriate dimensions and measures.
 </p>
 <p>Using CSV files as the source of data was a chance to show examples of how Tableau can be used to prepare data directly.
 For example visualizations that follow only three files from the set of data was used.
@@ -60,17 +60,15 @@ Which fields to join on each files is described in text file that is included in
 <section>
 <h3>
 <a name="player-batting-comparison" class="anchor" href="#player-batting-comparison"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
-A Tableau dashboard that follows permits the ability to compare different players batting statistics from <a href="http://www.mlb.com">Major League Baseball (MLB)</a> over a contiguous or dis-contiguous number of <em>Seasons</em>.
+Below a Tableau dashboard that permits the ability to compare different players, from <a href="http://www.mlb.com">Major League Baseball (MLB)</a>, batting statistics over a contiguous or dis-contiguous number of <em>Seasons</em>.
 <p>
+<p>At the top of the dashboard a table displays the raw batting statistics (Hits, At Bats, etc), for each player and season,
+which are used to compute such statistics as <a href="http://www.homerunweb.com/onbase.html">On Base Percentage</a> and <a href="http://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>. 
+Statistical analysis of On-Base Percentage and Slugging Percentage has demonstrated that these metrics are a far superior indicators of offensive success than their 19th century counterparts which traditionaly include: <a href="http://en.wikipedia.org/wiki/Stolen_base">Stolen Bases</a>, <a href="http://en.wikipedia.org/wiki/RBI">Runs Batted In (RBI)</a>, <a href="http://en.wikipedia.org/wiki/Batting_Average">Batting Average</a>.
 
-http://www.homerunweb.com/onbase.html
-http://www.wikihow.com/Calculate-Slugging-Percentage
-
-<p>Brief instructions on how to use the player batting comparison visualization:</p>
-<ol>
-<li>First use the <em>Season</em> and <em>Team</em> drop down menus narrow the players of interest</li>
-<li>Second use the players drop down menu to select the player(s) that you want to compare</li>
-<ol>
+http://en.wikipedia.org/wiki/Moneyball:_The_Art_of_Winning_an_Unfair_Game
+<p>To perform a comparative analysis of batting metrics between players, first use the <em>Season</em> and <em>Team</em> drop down menus to narrow down the players of interest.
+Second use the <em>Players</em> drop down menu to select the set of players that you want to compare.
 <p>The table show
 for which you want to view their batting average, OBP(On Base Percentage), and SLG(Slugging Percentage) over time.</li>
 <p>
@@ -167,7 +165,17 @@ for which you want to view their batting average, OBP(On Base Percentage), and S
 
 <h3>
 <a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Player's Birth Country</h3>
-
+<p>
+Tableau has builtin map capability and if a field in a data source represents a city or country, Tableau will compute the latitude and longitude from its online databases and visualize in an electronic map.
+Tableau is also able to pull in census data from various sources.
+Details on what is available can be found on a page on Tableau website that describes their <a href="http://www.tableausoftware.com/mapdata">map data partners</a>. Tableau also supports <a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Services</a> if Tableau's online map data is insufficient.
+</p>
+<p>
+This last dashboard shows the number of players born in each country, in filled map format, for players who were active in the MLB from the 1985 through 2012 season.
+You can drill down and get the details of the specific players in each country by hovering over, or selecting a specific country so that the tool tip is displayed.
+Once the tool tip is displayed you can then click on the icon that resembles a table to get the underlying rows that sum to give the count of the players from a selected country.
+</p>Controls in the upper left of the map allow zooming in/out, zooming by selecting an area, and returning to the home view. In 
+<p>
 </section>
 
 <script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'>
