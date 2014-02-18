@@ -43,7 +43,9 @@
         </h3>
 
 <p>This page showcases calculation and visualization within <a href="http://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="http://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>.
-Tableau provides a public site that allows sharing of visualizations created using <a href="http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed these visualizations within your own pages. In the following sections visualizations from Tableau Public are shown with a brief description of data used within them.
+Tableau provides a public site that allows sharing of visualizations created using <a href="http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed these visualizations within your own pages.
+In the following sections visualizations from Tableau Public are shown with a brief description of data used within them.
+All of the example Tableau visualization workbooks, data extractions, and raw data are publicly available on <a href="https://github.com/dgwartney/tableau">GitHub</a>.
 </p>
         <h3>
         <a name="preparing-the-data" class="anchor" href="#preparing-the-data"><span class="octicon octicon-link"></span></a>Preparing the Data</h3>
@@ -60,17 +62,19 @@ Which fields to join on each files is described in text file that is included in
 <section>
 <h3>
 <a name="player-batting-comparison" class="anchor" href="#player-batting-comparison"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
-Below a Tableau dashboard that permits the ability to compare different players, from <a href="http://www.mlb.com">Major League Baseball (MLB)</a>, batting statistics over a contiguous or dis-contiguous number of <em>Seasons</em>.
+Below, a Tableau dashboard is displayed that permits comparison of different players, from <a href="http://www.mlb.com">Major League Baseball (MLB)</a>, batting statistics over a contiguous or dis-contiguous number of <em>Seasons</em>.
 
 <p>At the top of the dashboard a table displays the raw batting statistics (Hits, At Bats, etc), for each player and season,
 which are used to compute such statistics as <a href="http://www.homerunweb.com/onbase.html">On Base Percentage</a> and <a href="http://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>. 
 Statistical analysis of On-Base Percentage and Slugging Percentage has demonstrated that these metrics are a far superior indicators of offensive success than their 19th century counterparts which traditionaly include: <a href="http://en.wikipedia.org/wiki/Stolen_base">Stolen Bases</a>, <a href="http://en.wikipedia.org/wiki/RBI">Runs Batted In (RBI)</a>, <a href="http://en.wikipedia.org/wiki/Batting_Average">Batting Average</a>.
-<a href="http://en.wikipedia.org/wiki/Moneyball"><em>Moneyball:The Art of Winning an Unfair Game</em></a>, a book by Michael Lewis, chronicles the general manager <a href="">Billy Bean's</a> <a href="http://en.wikipedia.org/wiki/Sabermetric">sabermetric</a> approach in forming a competitive team with uncompetive revenue during the Oakland Athletic's 2003 season.
+<a href="http://en.wikipedia.org/wiki/Moneyball"><em>Moneyball:The Art of Winning an Unfair Game</em></a>, a book by Michael Lewis, chronicles the general manager <a href="">Billy Bean's</a> <a href="http://en.wikipedia.org/wiki/Sabermetric">sabermetric</a> approach in forming a competitive team with uncompetive revenue during the Oakland Athletic's 2003 season, which relies heavily on on-base percentage and slugging percentage.
 </p>
 
 <p>To perform a comparative analysis of batting metrics between players, first, use the <em>Season</em> and <em>Team</em> drop down menus to narrow down the players of interest.
 Second use the <em>Players</em> drop down menu to select the set of players that you want to compare. Comparison of the selected players (lines) batting metrics (y-axis), over the select seasons (x-axis) will be displayed in the graph in the lower half of the dashboard.
 </p>
+
+<p>Note: The default values when initial visiting the page are intentional since it shows the two players Mark McGwire, and Sammy Sosa in the period during the <a href="http://en.wikipedia.org/wiki/1998_Major_League_Baseball_home_run_record_chase">1998 Major League Baseball home run record chase</a>.
 </section>
 
 <script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
@@ -103,6 +107,12 @@ Second use the <em>Players</em> drop down menu to select the set of players that
 <section>
 <h3>
 <a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Team Batting Comparison</h3>
+<p> A comparison of MLB baseball teams traditional offensive metrics (Hits, Runs, RBIs) is shown in the Team Batting Comparison dashboard. These metrics were choosen for comparison because they are <a href="http://en.wikipedia.org/wiki/Fact_table">Additive</a>. Team metrics for On-base Percentage, and Slugging Percentage cannot be calculated from each players respective values.
+Tableau can compute such metric using a <em>Table Calculation</em>, but this was out of scope for this exercise.
+</p>
+<p>
+Metrics are shown rolled up by League (American, National), Team, and which side the player bats. Using the <em>Season</em> drop you can select a single year for which to compare teams for the aggregated values. 
+</p>
 </section>
 
 <script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
@@ -164,7 +174,7 @@ Second use the <em>Players</em> drop down menu to select the set of players that
 <h3>
 <a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Player's Birth Country</h3>
 <p>
-Tableau has builtin map capability and if a field in a data source represents a city or country, Tableau will compute the latitude and longitude from its online databases and visualize in an electronic map.
+Tableau has built-in map capability and if a field in a data source represents a city or country, Tableau will compute the latitude and longitude from its online databases and visualize in an electronic map.
 Tableau is also able to pull in census data from various sources.
 Details on what is available can be found on a page on Tableau website that describes their <a href="http://www.tableausoftware.com/mapdata">map data partners</a>. Tableau also supports <a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Services</a> if Tableau's online map data is insufficient.
 </p>
