@@ -42,75 +42,171 @@
         <a name="welcome-to-baseball-satistics-and-tableau" class="anchor" href="#welcome-to-baseball-statistics-and-tableau"><span class="octicon octicon-link"></span></a>Welcome to Baseball Statistics and Tableau.
         </h3>
 
-<p>This page showcases calculation and visualization within <a href="http://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="http://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>. Tableau provides a public site that allows sharing of visualizations created using <a href=http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed your visualizations within your own pages which has been done here.
+<p>This page showcases calculation and visualization within <a href="http://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="http://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>.
+Tableau provides a public site that allows sharing of visualizations created using <a href="http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed these visualizations within your own pages. In the following sections visualizations from Tableau Public are shown with a brief description of data used within them.
 </p>
         <h3>
         <a name="preparing-the-data" class="anchor" href="#preparing-the-data"><span class="octicon octicon-link"></span></a>Preparing the Data</h3>
         <p>Baseball statistic data mentioned above comes in three different formats: Access Database, SQL DDL and DML, and files in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.
-I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or Kettle</a> to clean and normalize the data. The normalized data then would be loaded into a relation cube using a star schema.
-Using CSV files as the source of data was a chance to show examples of how Tableau can be used to prepare data directly.
-For these examples only three files of the complete set of data was used.
-A data source was defined in Tableau that joined the following files:<code>batting.csv</code>,<code>master.csv</code>, and<code>teams.csv</code>. Included in the baseball data distribution is a text file describing the contents of each of the files and fields within them.
-        </p>
+I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> or <a href="http://www.postgresql.org">PostgreSQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or by its open source name Kettle</a> to clean and normalize the data and then the normalized data would be loaded into a relation cube consisting ofa star schema with appropriate dimensions and measures.
+</p>
+<p>Using CSV files as the source of data was a chance to show examples of how Tableau can be used to prepare data directly.
+For example visualizations that follow only three files from the set of data was used.
+Specifically a single data source was defined in Tableau that joined the following files:<code>batting.csv</code>,<code>master.csv</code>, and<code>teams.csv</code>.
+Which fields to join on each files is described in text file that is included in the baseball data distribution.</p>
 
-<!--
-<p> using automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
--->
-
-http://community.pentaho.com/projects/data-integration/
-
+<p>Sections below give a quick overview of the dashboards created in Tableau using the baseball statistical data.</p>
+</section>
+<section>
 <h3>
 <a name="player-batting-comparison" class="anchor" href="#player-batting-comparison"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
-
+A Tableau dashboard that follows permits the ability to compare different players batting statistics from <a href="http://www.mlb.com">Major League Baseball (MLB)</a> over a contiguous or dis-contiguous number of <em>Seasons</em>.
 <p>
-<a href="http://www.homerunweb.com/onbase.html">On Base Percentage<a>
-<a href="http://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>
-Details and the significance of slugging percentage can be found on <a href="http://en.wikipedia.org/wiki/Slugging_percentage">Wikipedia</a>
-</p>
 
-<h4>Instructions on using player batting comparison</h4>
+http://www.homerunweb.com/onbase.html
+http://www.wikihow.com/Calculate-Slugging-Percentage
+
+<p>Brief instructions on how to use the player batting comparison visualization:</p>
 <ol>
-<li>First use the season and team drop down menus narrow the players of interest</li>
-<li>Second use the players drop down menu to select the player(s) for which you want to view their batting average, OBP(On Base Percentage), and SLG(Slugging Percentage) over time.</li>
+<li>First use the <em>Season</em> and <em>Team</em> drop down menus narrow the players of interest</li>
+<li>Second use the players drop down menu to select the player(s) that you want to compare</li>
 <ol>
-
-
-
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1004px; height: 895px;'><noscript><a href='#'><img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' width='1004' height='895' style='display:none;'><param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' /> <param name='site_root' value='' /><param name='name' value='Baseball_8&#47;PlayerBattingComparison' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div><div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'><div style='float:right; padding-right:8px;'><a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a></div></div>
-
-<p>TBD
+<p>The table show
+for which you want to view their batting average, OBP(On Base Percentage), and SLG(Slugging Percentage) over time.</li>
+<p>
 </p>
+</section>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
+<noscript>
+<a href='null'>
+<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz' width='1004' height='895' style='display:none;'>
+<param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' />
+<param name='site_root' value='' />
+<param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
+<param name='tabs' value='yes' />
+<param name='toolbar' value='yes' />
+<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+</object>
+</div>
+<div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
+<div style='float:right; padding-right:8px;'>
+<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+</div>
+</div>
+
+<section>
+<h3>
+<a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Team Batting Comparison</h3>
+</section>
+
+<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
+<noscript>
+<a href='null'>
+<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz' width='1004' height='895' style='display:none;'>
+<param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' />
+<param name='site_root' value='' />
+<param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
+<param name='tabs' value='yes' />
+<param name='toolbar' value='yes' />
+<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+</object>
+</div>
+<div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
+<div style='float:right; padding-right:8px;'>
+<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+</div>
+</div>
+
+<section>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Players Birth Country</h3>
+<a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Player's Birth Country</h3>
 
-<p>TBD
-</p>
+</section>
+
+<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'>
+</script>
+<div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
+<noscript>
+<a href='null'>
+<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz' width='1004' height='895' style='display:none;'>
+<param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' />
+<param name='site_root' value='' />
+<param name='name' value='Baseball_8&#47;PlayersBirthCountry' />
+<param name='tabs' value='yes' />
+<param name='toolbar' value='yes' />
+<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+</object>
+</div>
+<div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
+<div style='float:right; padding-right:8px;'>
+<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayersBirthCountry' target='_blank'>Learn About Tableau</a>
+</div>
+</div>
 
 <!--
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
+<noscript>
+<a href='null'>
+<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
+</a>
+</noscript>
+<object class='tableauViz' width='1004' height='895' style='display:none;'>
+<param name='host_url' value='http%3A%2F%2Fpublic.tableausoftware.com%2F' />
+<param name='site_root' value='' />
+<param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
+<param name='tabs' value='yes' />
+<param name='toolbar' value='yes' />
+<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='animate_transition' value='yes' />
+<param name='display_static_image' value='yes' />
+<param name='display_spinner' value='yes' />
+<param name='display_overlay' value='yes' />
+<param name='display_count' value='yes' />
+</object>
+</div>
+<div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
+<div style='float:right; padding-right:8px;'>
+<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+</div>
+</div>
 -->
 
+<section>
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Social Baseball</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<!--
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
--->
-    </section>
+<a name="what-now" class="anchor" href="#what-now"><span class="octicon octicon-link"></span></a>What Now?</h3>
+<p><a href="http://www.imdb.com/title/tt0110912/quotes?item=qt0447123">What Now?</a>, I had an explicit time box on how much I was going to spending putting this together, but came short on adding the ability to search Google, or Twitter when a team was selected in the Team Batting Comparison dashboard.
+A web page of the results from Googler or Twitter would then be displayed below the graph in the same dashboard.
+</p>
+</section>
 
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
