@@ -42,15 +42,15 @@
         <a name="welcome-to-baseball-satistics-and-tableau" class="anchor" href="#welcome-to-baseball-statistics-and-tableau"><span class="octicon octicon-link"></span></a>Welcome to Baseball Statistics and Tableau.
         </h3>
 
-<p>This page showcases calculation and visualization within <a href="http://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="http://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>.
-Tableau provides a public site that allows sharing of visualizations created using <a href="http://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed these visualizations within your own pages.
+<p>This page showcases calculation and visualization within <a href="https://www.tableausoftware.com">Tableau</a> using a subset of baseball statistical data obtain from <a href="https://www.seanlahman.com/baseball-archive/statistics/">SeahLahman.com</a>.
+Tableau provides a public site that allows sharing of visualizations created using <a href="https://www.tableausoftware.com/public/">Tableau Public</a> along with ability to embed these visualizations within your own pages.
 In the following sections visualizations from Tableau Public are shown with a brief description of data used within them.
 All of the example Tableau visualization workbooks, data extractions, and raw data are publicly available on <a href="https://github.com/dgwartney/tableau">GitHub</a>.
 </p>
         <h3>
         <a name="preparing-the-data" class="anchor" href="#preparing-the-data"><span class="octicon octicon-link"></span></a>Preparing the Data</h3>
-        <p>Baseball statistic data mentioned above comes in three different formats: Access Database, SQL DDL and DML, and files in <a href="http://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.
-I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="http://www.mysql.com">MySQL</a> or <a href="http://www.postgresql.org">PostgreSQL</a> and use the open source ETL tool <a href="http://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or by its open source name Kettle</a> to clean and normalize the data and then the normalized data would be loaded into a relation cube consisting of a star schema with appropriate dimensions and measures.
+        <p>Baseball statistic data mentioned above comes in three different formats: Access Database, SQL DDL and DML, and files in <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> format.
+I choose the later, but usually I would load the data sets of this size directly into a relational database such as <a href="https://www.mysql.com">MySQL</a> or <a href="https://www.postgresql.org">PostgreSQL</a> and use the open source ETL tool <a href="https://community.pentaho.com/projects/data-integration/">Pentaho Data Integration or by its open source name Kettle</a> to clean and normalize the data and then the normalized data would be loaded into a relation cube consisting of a star schema with appropriate dimensions and measures.
 </p>
 <p>Using CSV files as the source of data was a chance to show examples of how Tableau can be used to prepare data directly.
 For the example visualizations that follow, only three files from the set of data were used.
@@ -62,26 +62,26 @@ Which fields to join on each of the files is described in text file that is incl
 <section>
 <h3>
 <a name="player-batting-comparison" class="anchor" href="#player-batting-comparison"><span class="octicon octicon-link"></span></a>Player Batting Comparison</h3>
-Below, a Tableau dashboard is displayed that permits comparison of different players, from <a href="http://www.mlb.com">Major League Baseball (MLB)</a>, batting statistics over a contiguous or dis-contiguous number of <em>Seasons</em>.
+Below, a Tableau dashboard is displayed that permits comparison of different players, from <a href="https://www.mlb.com">Major League Baseball (MLB)</a>, batting statistics over a contiguous or dis-contiguous number of <em>Seasons</em>.
 
 <p>At the top of the dashboard a table displays the raw batting statistics (Hits, At Bats, etc), for each player and season,
-which are used to compute such statistics as <a href="http://www.homerunweb.com/onbase.html">On Base Percentage</a> and <a href="http://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>. 
-Statistical analysis of On-Base Percentage and Slugging Percentage has demonstrated that these metrics are a far superior indicators of offensive success than their 19th century counterparts which traditionaly include: <a href="http://en.wikipedia.org/wiki/Stolen_base">Stolen Bases</a>, <a href="http://en.wikipedia.org/wiki/RBI">Runs Batted In (RBI)</a>, <a href="http://en.wikipedia.org/wiki/Batting_Average">Batting Average</a>.
-<a href="http://en.wikipedia.org/wiki/Moneyball"><em>Moneyball:The Art of Winning an Unfair Game</em></a>, a book by Michael Lewis, chronicles the general manager <a href="">Billy Bean's</a> <a href="http://en.wikipedia.org/wiki/Sabermetric">sabermetric</a> approach in forming a competitive team with uncompetitive revenue during the Oakland Athletic's 2003 season, which relies heavily on on-base percentage and slugging percentage.
+which are used to compute such statistics as <a href="https://www.homerunweb.com/onbase.html">On Base Percentage</a> and <a href="https://www.wikihow.com/Calculate-Slugging-Percentage">Slugging Percentage</a>. 
+Statistical analysis of On-Base Percentage and Slugging Percentage has demonstrated that these metrics are a far superior indicators of offensive success than their 19th century counterparts which traditionaly include: <a href="https://en.wikipedia.org/wiki/Stolen_base">Stolen Bases</a>, <a href="https://en.wikipedia.org/wiki/RBI">Runs Batted In (RBI)</a>, <a href="https://en.wikipedia.org/wiki/Batting_Average">Batting Average</a>.
+<a href="https://en.wikipedia.org/wiki/Moneyball"><em>Moneyball:The Art of Winning an Unfair Game</em></a>, a book by Michael Lewis, chronicles the general manager <a href="">Billy Bean's</a> <a href="https://en.wikipedia.org/wiki/Sabermetric">sabermetric</a> approach in forming a competitive team with uncompetitive revenue during the Oakland Athletic's 2003 season, which relies heavily on on-base percentage and slugging percentage.
 </p>
 
 <p>To perform a comparative analysis of batting metrics between players, first, use the <em>Season</em> and <em>Team</em> drop down menus to narrow down the players of interest.
 Second use the <em>Players</em> drop down menu to select the set of players that you want to compare. Comparison of the selected players (lines) batting metrics (y-axis), over the select seasons (x-axis) will be displayed in the graph in the lower half of the dashboard.
 </p>
 
-<p>Note: The default values when initially visiting the page are intentional since it shows the two players Mark McGwire, and Sammy Sosa in the period during the <a href="http://en.wikipedia.org/wiki/1998_Major_League_Baseball_home_run_record_chase">1998 Major League Baseball home run record chase</a>.
+<p>Note: The default values when initially visiting the page are intentional since it shows the two players Mark McGwire, and Sammy Sosa in the period during the <a href="https://en.wikipedia.org/wiki/1998_Major_League_Baseball_home_run_record_chase">1998 Major League Baseball home run record chase</a>.
 </section>
 
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
 <noscript>
 <a href='null'>
-<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1_rss.png' style='border: none' />
+<img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1_rss.png' style='border: none' />
 </a>
 </noscript>
 <object class='tableauViz' width='1004' height='895' style='display:none;'>
@@ -90,7 +90,7 @@ Second use the <em>Players</em> drop down menu to select the set of players that
 <param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
 <param name='tabs' value='yes' />
 <param name='toolbar' value='yes' />
-<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
 <param name='animate_transition' value='yes' />
 <param name='display_static_image' value='yes' />
 <param name='display_spinner' value='yes' />
@@ -100,14 +100,14 @@ Second use the <em>Players</em> drop down menu to select the set of players that
 </div>
 <div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
 <div style='float:right; padding-right:8px;'>
-<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+<a href='https://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
 </div>
 </div>
 
 <section>
 <h3>
 <a name="team-batting-comparison" class="anchor" href="#team-batting-comparison"><span class="octicon octicon-link"></span></a>Team Batting Comparison</h3>
-<p> A comparison of MLB baseball teams traditional offensive metrics (Hits, Runs, RBIs) is shown in the Team Batting Comparison dashboard. These metrics were choosen for comparison because they are <a href="http://en.wikipedia.org/wiki/Fact_table">Additive</a>. Team metrics for On-base Percentage, and Slugging Percentage cannot be calculated from each players respective values.
+<p> A comparison of MLB baseball teams traditional offensive metrics (Hits, Runs, RBIs) is shown in the Team Batting Comparison dashboard. These metrics were choosen for comparison because they are <a href="https://en.wikipedia.org/wiki/Fact_table">Additive</a>. Team metrics for On-base Percentage, and Slugging Percentage cannot be calculated from each players respective values.
 Tableau can compute such metric using a <em>Table Calculation</em>, but this was out of scope for this exercise.
 </p>
 <p>
@@ -115,11 +115,11 @@ Metrics are shown rolled up by League (American, National), Team, and which side
 </p>
 </section>
 
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
 <noscript>
 <a href='null'>
-<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
+<img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
 </a>
 </noscript>
 <object class='tableauViz' width='1004' height='895' style='display:none;'>
@@ -128,7 +128,7 @@ Metrics are shown rolled up by League (American, National), Team, and which side
 <param name='name' value='Baseball_8&#47;TeamBattingComparison' />
 <param name='tabs' value='yes' />
 <param name='toolbar' value='yes' />
-<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1.png' />
+<param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1.png' />
 <param name='animate_transition' value='yes' />
 <param name='display_static_image' value='yes' />
 <param name='display_spinner' value='yes' />
@@ -138,15 +138,15 @@ Metrics are shown rolled up by League (American, National), Team, and which side
 </div>
 <div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
 <div style='float:right; padding-right:8px;'>
-<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/TeamBattingComparison' target='_blank'>Learn About Tableau</a>
+<a href='https://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Baseball_8/TeamBattingComparison' target='_blank'>Learn About Tableau</a>
 </div>
 </div>
 <!--
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
 <noscript>
 <a href='null'>
-<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
+<img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
 </a>
 </noscript>
 <object class='tableauViz' width='1004' height='895' style='display:none;'>
@@ -155,7 +155,7 @@ Metrics are shown rolled up by League (American, National), Team, and which side
 <param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
 <param name='tabs' value='yes' />
 <param name='toolbar' value='yes' />
-<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
 <param name='animate_transition' value='yes' />
 <param name='display_static_image' value='yes' />
 <param name='display_spinner' value='yes' />
@@ -165,7 +165,7 @@ Metrics are shown rolled up by League (American, National), Team, and which side
 </div>
 <div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
 <div style='float:right; padding-right:8px;'>
-<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+<a href='https://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
 </div>
 </div>
 -->
@@ -178,7 +178,7 @@ Tableau has built-in map capability and if a field in a data source represents a
 Tableau is also able to pull in census data from various sources to display as well.
 </p>
 <p>
-Details on what map data is available can be found on a page at the Tableau website that describes their <a href="http://www.tableausoftware.com/mapdata">map data partners</a>. Tableau also supports <a href="http://en.wikipedia.org/wiki/Web_Map_Service">Web Map Services</a>, if Tableau's online map data is insufficient.
+Details on what map data is available can be found on a page at the Tableau website that describes their <a href="https://www.tableausoftware.com/mapdata">map data partners</a>. Tableau also supports <a href="https://en.wikipedia.org/wiki/Web_Map_Service">Web Map Services</a>, if Tableau's online map data is insufficient.
 </p>
 <p>
 This last dashboard shows the number of players born in each country, in filled map format, for players who were active in the MLB from the 1985 through 2012 season.
@@ -188,12 +188,12 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 <p>
 </section>
 
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'>
 </script>
 <div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
 <noscript>
 <a href='null'>
-<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1_rss.png' style='border: none' />
+<img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1_rss.png' style='border: none' />
 </a>
 </noscript>
 <object class='tableauViz' width='1004' height='895' style='display:none;'>
@@ -202,7 +202,7 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 <param name='name' value='Baseball_8&#47;PlayersBirthCountry' />
 <param name='tabs' value='yes' />
 <param name='toolbar' value='yes' />
-<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1.png' />
+<param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayersBirthCountry&#47;1.png' />
 <param name='animate_transition' value='yes' />
 <param name='display_static_image' value='yes' />
 <param name='display_spinner' value='yes' />
@@ -212,16 +212,16 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 </div>
 <div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
 <div style='float:right; padding-right:8px;'>
-<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayersBirthCountry' target='_blank'>Learn About Tableau</a>
+<a href='https://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Baseball_8/PlayersBirthCountry' target='_blank'>Learn About Tableau</a>
 </div>
 </div>
 
 <!--
-<script type='text/javascript' src='http://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
+<script type='text/javascript' src='https://public.tableausoftware.com/javascripts/api/viz_v1.js'></script>
 <div class='tableauPlaceholder' style='width: 1004px; height: 895px;'>
 <noscript>
 <a href='null'>
-<img alt=' ' src='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
+<img alt=' ' src='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;TeamBattingComparison&#47;1_rss.png' style='border: none' />
 </a>
 </noscript>
 <object class='tableauViz' width='1004' height='895' style='display:none;'>
@@ -230,7 +230,7 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 <param name='name' value='Baseball_8&#47;PlayerBattingComparison' />
 <param name='tabs' value='yes' />
 <param name='toolbar' value='yes' />
-<param name='static_image' value='http:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
+<param name='static_image' value='https:&#47;&#47;public.tableausoftware.com&#47;static&#47;images&#47;Ba&#47;Baseball_8&#47;PlayerBattingComparison&#47;1.png' />
 <param name='animate_transition' value='yes' />
 <param name='display_static_image' value='yes' />
 <param name='display_spinner' value='yes' />
@@ -240,7 +240,7 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 </div>
 <div style='width:1004px;height:22px;padding:0px 10px 0px 0px;color:black;font:normal 8pt verdana,helvetica,arial,sans-serif;'>
 <div style='float:right; padding-right:8px;'>
-<a href='http://www.tableausoftware.com/public/about-tableau-products?ref=http://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
+<a href='https://www.tableausoftware.com/public/about-tableau-products?ref=https://public.tableausoftware.com/views/Baseball_8/PlayerBattingComparison' target='_blank'>Learn About Tableau</a>
 </div>
 </div>
 -->
@@ -248,7 +248,7 @@ Once the tool tip is displayed you can then click on the icon that resembles a t
 <!-- <section>
 <h3>
 <a name="what-now" class="anchor" href="#what-now"><span class="octicon octicon-link"></span></a>What Now?</h3>
-<p><a href="http://www.imdb.com/title/tt0110912/quotes?item=qt0447123">What Now?</a>, add the year salary available for each player to determine the relative cost with respect on-base percentage and slugging percentage.
+<p><a href="https://www.imdb.com/title/tt0110912/quotes?item=qt0447123">What Now?</a>, add the year salary available for each player to determine the relative cost with respect on-base percentage and slugging percentage.
 </p>
 </section>
 -->
